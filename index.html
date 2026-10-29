@@ -92,13 +92,6 @@ a { color: inherit; }
 .f7 { left: 6%;  top: 70%; width: 32%; height: 28%; --atraso: -2.5s; }
 .f8 { left: 41%; top: 67%; width: 24%; height: 30%; --atraso: -4.5s; }
 
-/* Prova */
-.prova { border-block: 1px solid var(--linha); background: rgba(255,255,255,.015); }
-.prova ul { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); }
-.prova li { padding: 26px 18px; text-align: center; }
-.prova li + li { border-left: 1px solid var(--linha); }
-.prova strong { display: block; font-size: clamp(24px, 2.6vw, 34px); letter-spacing: -.03em; color: var(--gold); }
-.prova span { font-size: 15px; color: var(--muted); }
 
 /* Destinos com a rota */
 .destinos { position: relative; padding: 110px 0 80px; overflow: hidden; }
@@ -205,18 +198,13 @@ footer .creditos { max-width: 900px; margin-inline: auto; }
   .logo-globo { width: 28px; height: 28px; }
   .hero-grade { display: flex; flex-direction: column-reverse; gap: 6px; text-align: center; }
   .hero h1 { font-size: 29px; line-height: 1.1; letter-spacing: -.03em; }
-  .hero .sub { font-size: 15px; line-height: 1.5; margin: 12px auto 0; }
-  .hero .btn { width: 100%; min-height: 54px; margin-top: 22px; font-size: 16px; padding: 0 18px; }
+  .hero .sub { font-size: 14.5px; line-height: 1.45; margin: 10px auto 0; }
+  .hero .btn { width: 100%; min-height: 54px; margin-top: 16px; font-size: 16px; padding: 0 18px; }
   .hero .seguro { font-size: 12.5px; margin-top: 10px; }
-  .colagem { height: 300px; max-width: 340px; margin: 4px auto 18px; }
+  .colagem { height: 205px; max-width: 290px; margin: 2px auto 14px; }
   .foto { border-radius: 10px; border-width: 1.5px; box-shadow: 0 0 0 3px rgba(255,196,46,.1), 0 0 22px -4px var(--gold-glow); }
-  .foto span { font-size: 10.5px; left: 6px; bottom: 4px; }
+  .foto span { font-size: 9.5px; left: 5px; bottom: 3px; }
   .globo { width: 520px; right: -170px; top: -40px; opacity: .35; }
-  .prova ul { grid-template-columns: repeat(4, 1fr); }
-  .prova li { padding: 14px 4px; }
-  .prova li + li { border-left: 1px solid var(--linha); }
-  .prova strong { font-size: 15.5px; white-space: nowrap; letter-spacing: -.02em; }
-  .prova span { font-size: 10.5px; line-height: 1.3; display: block; }
   .destinos { padding: 48px 0 8px; }
   .destinos h2 { font-size: 22px; }
   .destinos .lead { font-size: 13.5px; margin-top: 8px; }
@@ -268,7 +256,9 @@ footer .creditos { max-width: 900px; margin-inline: auto; }
   footer { font-size: 11.5px; padding: 22px 0 30px; }
 }
 @media (max-width: 360px) {
-  .hero h1 { font-size: 26px; }
+  .hero h1 { font-size: 25px; }
+  .colagem { height: 160px; max-width: 240px; }
+  .hero .sub { font-size: 14px; }
   .btn, .hero .btn, .final .btn, .caixa .btn { font-size: 14.5px; gap: 8px; padding: 0 12px; }
 }
 </style>
@@ -292,7 +282,7 @@ footer .creditos { max-width: 900px; margin-inline: auto; }
     </g>
   </svg>
   <div class="wrap">
-    <a class="logo" href="#" aria-label="Central de Voos"><svg class="logo-globo" viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="#fff" stroke-width="2.4"><circle cx="24" cy="24" r="21"/><ellipse cx="24" cy="24" rx="9.5" ry="21"/><path d="M24 3v42M5 15h38M5 33h38"/></g><path d="M9 26.5c4-1.6 9-2.4 15-2.4l7-6h4l-4 6.1c3.4.1 6.4.5 8.6 1.1.9.3.9 1.4 0 1.7-2.2.6-5.2 1-8.6 1.1l4 6.1h-4l-7-6c-6 0-11-.8-15-2.4-.6-.3-.6-1 0-1.3z" fill="#fff" stroke="#050506" stroke-width="1.6"/></svg>Central de Voos</a>
+    <a class="logo" href="#" aria-label="Central de Voos"><img class="logo-globo" src="midia/logo-globo.png" alt="" width="40" height="40">Central de Voos</a>
     <div class="hero-grade">
       <div>
         <h1 class="sobe">Vem aí a <span class="dourado">Super Black Friday</span> da Central de Voos</h1>
@@ -315,14 +305,6 @@ footer .creditos { max-width: 900px; margin-inline: auto; }
   </div>
 </header>
 
-<section class="prova" aria-label="Números da Central de Voos">
-  <ul class="wrap">
-    <li class="sobe"><strong>+17 mil</strong><span>clientes atendidos</span></li>
-    <li class="sobe" style="--d:70ms"><strong>+45 mil</strong><span>pessoas nos grupos gratuitos</span></li>
-    <li class="sobe" style="--d:140ms"><strong>até 87%</strong><span>de desconto nas promoções</span></li>
-    <li class="sobe" style="--d:210ms"><strong>desde 2020</strong><span>empresa com Cadastur</span></li>
-  </ul>
-</section>
 
 <section class="destinos" aria-labelledby="t-destinos">
   <div class="wrap">
