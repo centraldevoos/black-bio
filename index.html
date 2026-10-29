@@ -38,6 +38,7 @@ figure { margin: 0; }
 a { color: inherit; }
 :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
 .wrap { width: min(1180px, 100% - 32px); margin-inline: auto; }
+h1, h2, .hero .sub, .lead, .item .nome { text-wrap: balance; }
 .dourado { color: var(--gold); }
 
 /* Botão dourado */
@@ -72,7 +73,6 @@ a { color: inherit; }
 .hero .sub { margin-top: 22px; font-size: 19px; line-height: 1.5; max-width: 30em; color: var(--muted); }
 .hero .sub b { color: var(--ink); font-weight: 700; }
 .hero .btn { margin-top: 34px; }
-.hero .seguro { margin-top: 14px; font-size: 14px; color: var(--muted); }
 
 /* Colagem de fotos inclinadas */
 .colagem { position: relative; height: 560px; transform: rotate(-6deg); }
@@ -146,18 +146,6 @@ a { color: inherit; }
 .caixa .info { text-align: center; color: var(--muted); font-size: 14.5px; margin-top: 16px; }
 .caixa .btn { width: 100%; margin-top: 16px; }
 
-/* Dúvidas */
-.duvidas { padding: 0 0 110px; }
-.duvidas h2 { text-align: center; font-size: clamp(26px, 3vw, 38px); letter-spacing: -.03em; }
-.perguntas { max-width: 820px; margin: 34px auto 0; display: grid; gap: 10px; }
-.perguntas details { background: var(--card); border: 1px solid var(--linha); border-radius: 14px; transition: border-color .25s; }
-.perguntas details[open] { border-color: rgba(255, 200, 61, .5); }
-.perguntas summary { list-style: none; cursor: pointer; padding: 18px 22px; min-height: 60px; display: flex; justify-content: space-between; gap: 18px; align-items: center; font-weight: 700; font-size: 17px; }
-.perguntas summary::-webkit-details-marker { display: none; }
-.perguntas summary::after { content: "+"; color: var(--gold); font-size: 24px; line-height: 1; transition: transform .3s var(--mola); }
-.perguntas details[open] summary::after { transform: rotate(45deg); }
-.perguntas details p { padding: 0 22px 20px; margin-top: -4px; color: var(--muted); font-size: 15.5px; }
-
 /* Chamada final */
 .final { position: relative; overflow: hidden; text-align: center; padding: 110px 0; border-top: 1px solid var(--linha);
   background: radial-gradient(50% 70% at 50% 100%, rgba(255, 196, 46, .2), transparent 70%); }
@@ -193,19 +181,21 @@ footer .creditos { max-width: 900px; margin-inline: auto; }
   body { font-size: 15px; }
   .wrap { width: calc(100% - 32px); }
   .faixa-trilho { font-size: 12.5px; padding: 7px 0; }
-  .hero { padding: 18px 0 44px; }
-  .logo { margin: 0 auto 6px; display: flex; justify-content: center; font-size: 15px; gap: 8px; }
+  .hero { padding: 20px 0 40px; }
+  .hero::before { background: radial-gradient(80% 30% at 50% 27%, rgba(255, 196, 46, .2), transparent 72%); }
+  .logo { margin: 0 auto; min-height: 44px; display: flex; justify-content: center; font-size: 15px; gap: 8px; }
   .logo-globo { width: 28px; height: 28px; }
-  .hero-grade { display: flex; flex-direction: column-reverse; gap: 6px; text-align: center; }
-  .hero h1 { font-size: 29px; line-height: 1.1; letter-spacing: -.03em; }
-  .hero .sub { font-size: 14.5px; line-height: 1.45; margin: 10px auto 0; }
-  .hero .btn { width: 100%; min-height: 54px; margin-top: 16px; font-size: 16px; padding: 0 18px; }
-  .hero .seguro { font-size: 12.5px; margin-top: 10px; }
-  .colagem { height: 205px; max-width: 290px; margin: 2px auto 14px; }
+  .hero-grade { display: flex; flex-direction: column-reverse; gap: 0; text-align: center; }
+  .hero h1 { font-size: 28px; line-height: 1.13; letter-spacing: -.03em; font-weight: 700; }
+  .hero .sub { font-size: 15px; line-height: 1.5; margin: 14px auto 0; max-width: 24em; }
+  .hero .sub b { display: block; }
+  .hero .btn { width: 100%; min-height: 56px; margin-top: 26px; font-size: 16px; padding: 0 18px; }
+  .colagem { height: 238px; max-width: 310px; margin: 4px auto 22px; }
   .foto { border-radius: 10px; border-width: 1.5px; box-shadow: 0 0 0 3px rgba(255,196,46,.1), 0 0 22px -4px var(--gold-glow); }
-  .foto span { font-size: 9.5px; left: 5px; bottom: 3px; }
-  .globo { width: 520px; right: -170px; top: -40px; opacity: .35; }
-  .destinos { padding: 48px 0 8px; }
+  .foto span { font-size: 10px; left: 6px; bottom: 4px; }
+  .globo { width: 460px; right: auto; left: 50%; margin-left: -230px; top: 20px; opacity: .3;
+    -webkit-mask-image: linear-gradient(#000 40%, transparent 72%); mask-image: linear-gradient(#000 40%, transparent 72%); }
+  .destinos { padding: 36px 0 8px; }
   .destinos h2 { font-size: 22px; }
   .destinos .lead { font-size: 13.5px; margin-top: 8px; }
   .fila { margin-top: 18px; gap: 5px; justify-content: center; overflow: visible; padding: 22px 0; }
@@ -243,21 +233,19 @@ footer .creditos { max-width: 900px; margin-inline: auto; }
   .revela .oculto { font-size: 34px; }
   .caixa .info { font-size: 13px; margin-top: 12px; }
   .caixa .btn { min-height: 52px; font-size: 16px; margin-top: 12px; }
-  .duvidas { padding-bottom: 56px; }
-  .duvidas h2 { font-size: 22px; }
-  .perguntas { margin-top: 18px; gap: 8px; }
-  .perguntas summary { font-size: 14.5px; padding: 13px 16px; min-height: 48px; }
-  .perguntas summary::after { font-size: 20px; }
-  .perguntas details p { font-size: 14px; padding: 0 16px 14px; }
   .final { padding: 56px 0; }
   .final h2 { font-size: 24px; }
   .final p { font-size: 14px; margin-top: 10px; }
   .final .btn { width: 100%; min-height: 54px; font-size: 16px; padding: 0 18px; margin-top: 20px; }
   footer { font-size: 11.5px; padding: 22px 0 30px; }
 }
+@media (max-width: 380px) {
+  .colagem { height: 210px; max-width: 280px; margin-bottom: 22px; }
+  .hero .sub { font-size: 14.5px; }
+}
 @media (max-width: 360px) {
   .hero h1 { font-size: 25px; }
-  .colagem { height: 160px; max-width: 240px; }
+  .colagem { height: 175px; max-width: 250px; margin-bottom: 20px; }
   .hero .sub { font-size: 14px; }
   .btn, .hero .btn, .final .btn, .caixa .btn { font-size: 14.5px; gap: 8px; padding: 0 12px; }
 }
@@ -286,20 +274,19 @@ footer .creditos { max-width: 900px; margin-inline: auto; }
     <div class="hero-grade">
       <div>
         <h1 class="sobe">Vem aí a <span class="dourado">Super Black Friday</span> da Central de Voos</h1>
-        <p class="sub sobe" style="--d:90ms"><b>A maior Black Friday de turismo da história do Brasil.</b> Tudo o que a gente faz pra você viajar pagando menos, num acesso só. Nunca mais perca tempo ou dinheiro procurando passagem aérea.</p>
+        <p class="sub sobe" style="--d:90ms"><b>A maior Black Friday da nossa história.</b> Tudo o que a gente faz pra você viajar pagando menos, num acesso só. Nunca mais perca tempo ou dinheiro procurando passagem aérea.</p>
         <a class="btn js-grupo sobe" style="--d:170ms" href="#">Quero entrar no grupo gratuito
           <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M5 13L13 5M6 5h7v7" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <p class="seguro sobe" style="--d:230ms">É grátis. O preço e a data saem primeiro no grupo.</p>
       </div>
       <div class="colagem sobe" style="--d:120ms" aria-label="Destinos de promoções da Central de Voos">
-        <figure class="foto f1"><img src="midia/destinos/roma.jpg" alt="Coliseu, em Roma" width="800" height="533"><span>Roma</span></figure>
-        <figure class="foto f2"><img src="midia/destinos/nova-york.jpg" alt="Manhattan, Nova York" width="800" height="533"><span>Nova York</span></figure>
-        <figure class="foto f3"><img src="midia/destinos/paris.jpg" alt="Torre Eiffel, Paris" width="800" height="533"><span>Paris</span></figure>
-        <figure class="foto f4"><img src="midia/destinos/executiva.jpg" alt="Poltrona de classe executiva" width="800" height="533"><span>Executiva</span></figure>
-        <figure class="foto f5"><img src="midia/destinos/orlando.jpg" alt="Castelo da Cinderela, Orlando" width="800" height="533"><span>Orlando</span></figure>
-        <figure class="foto f6"><img src="midia/destinos/maldivas.jpg" alt="Bangalôs sobre o mar, Maldivas" width="800" height="533"><span>Maldivas</span></figure>
-        <figure class="foto f7"><img src="midia/destinos/lisboa.jpg" alt="Vista de Lisboa" width="800" height="533"><span>Lisboa</span></figure>
-        <figure class="foto f8"><img src="midia/destinos/gramado.jpg" alt="Gramado, Rio Grande do Sul" width="800" height="533"><span>Gramado</span></figure>
+        <figure class="foto f1"><img src="midia/destinos/roma.jpg" alt="Coliseu, em Roma" width="640" height="426"><span>Roma</span></figure>
+        <figure class="foto f2"><img src="midia/destinos/nova-york.jpg" alt="Manhattan, Nova York" width="640" height="426"><span>Nova York</span></figure>
+        <figure class="foto f3"><img src="midia/destinos/paris.jpg" alt="Torre Eiffel, Paris" width="640" height="426"><span>Paris</span></figure>
+        <figure class="foto f4"><img src="midia/destinos/executiva.jpg" alt="Poltrona de classe executiva" width="640" height="426"><span>Executiva</span></figure>
+        <figure class="foto f5"><img src="midia/destinos/orlando.jpg" alt="Castelo da Cinderela, Orlando" width="640" height="426"><span>Orlando</span></figure>
+        <figure class="foto f6"><img src="midia/destinos/maldivas.jpg" alt="Bangalôs sobre o mar, Maldivas" width="640" height="426"><span>Maldivas</span></figure>
+        <figure class="foto f7"><img src="midia/destinos/lisboa.jpg" alt="Vista de Lisboa" width="640" height="426"><span>Lisboa</span></figure>
+        <figure class="foto f8"><img src="midia/destinos/gramado.jpg" alt="Gramado, Rio Grande do Sul" width="640" height="426"><span>Gramado</span></figure>
       </div>
     </div>
   </div>
@@ -322,13 +309,13 @@ footer .creditos { max-width: 900px; margin-inline: auto; }
         </path>
       </g>
     </svg>
-    <div class="card"><img src="midia/destinos/buenos-aires.jpg" alt="" width="800" height="533" loading="lazy"><span>Buenos Aires</span></div>
-    <div class="card"><img src="midia/destinos/cancun.jpg" alt="" width="800" height="533" loading="lazy"><span>Cancún</span></div>
-    <div class="card"><img src="midia/destinos/executiva.jpg" alt="" width="800" height="533" loading="lazy"><span><b class="so-pc">Executiva e<br>Primeira Classe</b><b class="so-cel">Executiva</b></span></div>
-    <div class="card"><img src="midia/destinos/fernando-de-noronha.jpg" alt="" width="800" height="533" loading="lazy"><span>Fernando de Noronha</span></div>
-    <div class="card"><img src="midia/destinos/dubai.jpg" alt="" width="800" height="533" loading="lazy"><span>Dubai</span></div>
-    <div class="card"><img src="midia/destinos/santiago.jpg" alt="" width="800" height="533" loading="lazy"><span>Santiago</span></div>
-    <div class="card"><img src="midia/destinos/rio-de-janeiro.jpg" alt="" width="800" height="533" loading="lazy"><span>Rio de Janeiro</span></div>
+    <div class="card"><img src="midia/destinos/buenos-aires.jpg" alt="" width="640" height="426" loading="lazy"><span>Buenos Aires</span></div>
+    <div class="card"><img src="midia/destinos/cancun.jpg" alt="" width="640" height="426" loading="lazy"><span>Cancún</span></div>
+    <div class="card"><img src="midia/destinos/executiva.jpg" alt="" width="640" height="426" loading="lazy"><span><b class="so-pc">Executiva e<br>Primeira Classe</b><b class="so-cel">Executiva</b></span></div>
+    <div class="card"><img src="midia/destinos/fernando-de-noronha.jpg" alt="" width="640" height="426" loading="lazy"><span>Fernando de Noronha</span></div>
+    <div class="card"><img src="midia/destinos/dubai.jpg" alt="" width="640" height="426" loading="lazy"><span>Dubai</span></div>
+    <div class="card"><img src="midia/destinos/santiago.jpg" alt="" width="640" height="426" loading="lazy"><span>Santiago</span></div>
+    <div class="card"><img src="midia/destinos/rio-de-janeiro.jpg" alt="" width="640" height="426" loading="lazy"><span>Rio de Janeiro</span></div>
   </div>
 </section>
 
@@ -345,7 +332,7 @@ footer .creditos { max-width: 900px; margin-inline: auto; }
       <aside class="caixa sobe" style="--d:200ms" aria-label="Preço da Super Black Friday">
         <span class="aba">SUPER BLACK FRIDAY</span>
         <p class="custaria">Ter acesso a tudo isso, por 1 ano, custaria:</p>
-        <p class="total js-total">R$ 3.776</p>
+        <p class="total js-total">R$ 4.076</p>
         <p class="menor">Na Super Black Friday da Central de Voos, você leva tudo isso por <b>um valor muito menor!</b></p>
         <div class="revela js-revela" role="button" tabindex="0" aria-label="O preço só é revelado no grupo">
           <small><svg viewBox="0 0 14 14" aria-hidden="true"><rect x="2.5" y="6" width="9" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M4.5 6V4.5a2.5 2.5 0 015 0V6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>PREÇO REVELADO SÓ NO GRUPO</small>
@@ -360,18 +347,6 @@ footer .creditos { max-width: 900px; margin-inline: auto; }
 </section>
 
 
-<section class="duvidas" aria-labelledby="t-duvidas">
-  <div class="wrap">
-    <h2 id="t-duvidas" class="sobe">Perguntas frequentes</h2>
-    <div class="perguntas">
-      <details class="sobe"><summary>Quando começa a Super Black Friday?</summary><p>A data e o horário de abertura saem primeiro no grupo. Quem está no grupo fica sabendo antes de todo mundo.</p></details>
-      <details class="sobe"><summary>Quanto vai custar?</summary><p>O preço só é revelado no grupo, no dia da abertura. Tudo o que está nesta página, por um valor muito menor do que custaria por 1 ano.</p></details>
-      <details class="sobe"><summary>Entrar no grupo custa alguma coisa?</summary><p>Não. O grupo é gratuito. Você entra, já recebe promoções de passagens e todas as informações da Super Black Friday.</p></details>
-      <details class="sobe"><summary>Preciso ter milhas?</summary><p>Não. Você paga em Pix ou cartão, e a passagem sai no seu nome, direto no site da companhia aérea. O valor da passagem é pago à parte do acesso.</p></details>
-      <details class="sobe"><summary>A Central de Voos é confiável?</summary><p>Somos uma empresa formal de turismo, com Cadastur regular, desde 2020 e com mais de 17 mil clientes. Toda passagem sai no nome do cliente, com código de reserva que ele confere no site da companhia. E o acesso tem 7 dias de garantia.</p></details>
-    </div>
-  </div>
-</section>
 
 <section class="final" aria-labelledby="t-final">
   <div class="wrap">

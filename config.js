@@ -11,11 +11,11 @@ window.CONFIG = {
   ENTREGAS: [
     { nome: "Comunidade VIP no WhatsApp", desc: "Mais de 150 promoções de passagens por dia, saindo de todos os aeroportos do Brasil e separadas por região.", preco: 797, oficial: true },
     { nome: "App e plataforma Central de Voos", desc: "Você coloca de onde sai e pra onde quer ir e vê as promoções que já apareceram pra essa viagem.", preco: 497, oficial: false },
-    { nome: "Monitoramento de até 10 viagens", desc: "O nosso sistema vigia o preço da sua viagem sozinho, o tempo todo, e avisa quando baixa.", preco: 197, oficial: false },
+    { nome: "Monitoramento Personalizado com IA", desc: "A nossa inteligência artificial vigia o preço das suas viagens o tempo todo e avisa quando baixa.", preco: 297, oficial: false },
     { nome: "Especialistas no seu WhatsApp", desc: "Atendimento na frente da fila e pesquisas sem limite pra encontrar o melhor caminho da sua viagem.", preco: 997, oficial: false },
-    { nome: "Grupo de Executiva e Primeira Classe", desc: "Mais de 20 promoções por dia pra viajar na frente do avião.", preco: 297, oficial: false },
-    { nome: "Roteiros de viagem personalizados", desc: "Até 5 roteiros prontos para o destino que você escolher.", preco: 197, oficial: false },
-    { nome: "Curso de Milhas e Grupo de Estratégias", desc: "Aulas em vídeo pra juntar e usar pontos e milhas do jeito certo.", preco: 497, oficial: false },
+    { nome: "Workshop Caçador de Passagens", desc: "As técnicas que a nossa equipe usa todo dia pra achar passagem barata, pra você aplicar em qualquer viagem.", preco: 397, oficial: false },
+    { nome: "Curso de Milhas", desc: "Aulas em vídeo pra juntar e usar pontos e milhas do jeito certo.", preco: 497, oficial: false },
+    { nome: "Grupo de Estratégias de Milhas", desc: "As estratégias de milhas do momento, pra você saber a hora de juntar e a hora de emitir.", preco: 297, oficial: false },
     { nome: "Suporte jurídico", desc: "Advogada especialista em direito do passageiro pra quando o voo der problema.", preco: 297, oficial: false },
   ],
 };
