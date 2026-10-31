@@ -10,12 +10,11 @@ window.CONFIG = {
   // oficial: false = PROPOSTA, a validar com o Pedro antes de publicar.
   ENTREGAS: [
     { nome: "Comunidade VIP no WhatsApp", desc: "Mais de 150 promoções de passagens por dia, saindo de todos os aeroportos do Brasil e separadas por região.", preco: 797, oficial: true },
-    { nome: "App e plataforma Central de Voos", desc: "Você coloca de onde sai e pra onde quer ir e vê as promoções que já apareceram pra essa viagem.", preco: 497, oficial: false },
-    { nome: "Monitoramento Personalizado com IA", desc: "A nossa inteligência artificial vigia o preço das suas viagens o tempo todo e avisa quando baixa.", preco: 297, oficial: false },
-    { nome: "Especialistas no seu WhatsApp", desc: "Atendimento na frente da fila e pesquisas sem limite pra encontrar o melhor caminho da sua viagem.", preco: 997, oficial: false },
-    { nome: "Workshop Caçador de Passagens", desc: "As técnicas que a nossa equipe usa todo dia pra achar passagem barata, pra você aplicar em qualquer viagem.", preco: 397, oficial: false },
-    { nome: "Curso de Milhas", desc: "Aulas em vídeo pra juntar e usar pontos e milhas do jeito certo.", preco: 497, oficial: false },
-    { nome: "Grupo de Estratégias de Milhas", desc: "As estratégias de milhas do momento, pra você saber a hora de juntar e a hora de emitir.", preco: 297, oficial: false },
-    { nome: "Suporte jurídico", desc: "Advogada especialista em direito do passageiro pra quando o voo der problema.", preco: 297, oficial: false },
+    { tag: "Novidade", nome: "APP Central de Voos", desc: "Você coloca de onde sai e pra onde quer ir e vê as promoções que já apareceram pra essa viagem.", preco: 497, oficial: false },
+    { nome: "Monitoramento Personalizado com IA", desc: "O nosso sistema junta inteligência artificial e uma equipe especializada pra vigiar o preço das suas viagens e avisar quando baixa.", preco: 297, oficial: false },
+    { nome: "Workshop Desvendando as Milhas", desc: "Um encontro ao vivo pra entender de vez como as milhas funcionam e começar a usar do jeito certo.", preco: 397, oficial: false },
+    { nome: "Curso de Milhas", desc: "Aulas em vídeo pra juntar e usar pontos e milhas do jeito certo.", preco: 397, oficial: false },
+    { nome: "Grupo de Estratégias", desc: "As transferências bonificadas e as melhores estratégias do momento nos programas de pontos e milhas, com a referência de valor do milheiro, pra cada ponto seu render mais.", preco: 197, oficial: false },
+    { nome: "Suporte Jurídico", desc: "Advogada especialista em direito do passageiro pra quando o voo der problema.", preco: 197, oficial: false },
   ],
 };
